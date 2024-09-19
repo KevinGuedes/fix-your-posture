@@ -20,7 +20,7 @@ export default defineConfig({
         short_name: 'Fix Posture',
         description:
           "A simple beep in cadence to alert the user to fix it's posture",
-        theme_color: '#1e4173',
+        theme_color: '#059669 ',
       },
 
       workbox: {

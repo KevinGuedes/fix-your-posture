@@ -93,7 +93,7 @@ export function App() {
             {times.map((time) => (
               <label
                 key={time}
-                className={`flex cursor-pointer items-center gap-2 rounded-md border-2 border-sky-600 px-3 py-2 font-medium text-white ring-sky-500 ring-offset-2 transition-colors focus-within:outline-none focus-within:ring-2 focus-within:ring-sky-500 focus-within:ring-offset-sky-900 hover:border-emerald-500 has-[:disabled]:pointer-events-none has-[:disabled]:select-none has-[:disabled]:opacity-70 ${time === cadenceInMinutes ? 'border-emerald-500' : ''}`}
+                className={`flex cursor-pointer items-center gap-2 rounded-md border-2 px-3 py-2 font-medium text-white ring-sky-500 ring-offset-2 transition-colors focus-within:outline-none focus-within:ring-2 focus-within:ring-sky-500 focus-within:ring-offset-sky-900 hover:border-emerald-500 has-[:disabled]:pointer-events-none has-[:disabled]:select-none has-[:disabled]:opacity-70 ${time === cadenceInMinutes ? 'border-emerald-500' : 'border-sky-600'}`}
                 htmlFor={time.toString()}
               >
                 <RadioGroup.Item
