@@ -93,11 +93,11 @@ export function App() {
             {times.map((time) => (
               <label
                 key={time}
-                className={`flex cursor-pointer items-center gap-2 rounded-md border-2 border-sky-600 px-3 py-2 font-medium text-white transition-all hover:border-emerald-500 has-[:disabled]:pointer-events-none has-[:disabled]:select-none has-[:disabled]:opacity-70 ${time === cadenceInMinutes ? 'border-emerald-500' : ''}`}
+                className={`flex cursor-pointer items-center gap-2 rounded-md border-2 border-sky-600 px-3 py-2 font-medium text-white ring-sky-500 ring-offset-2 transition-colors focus-within:outline-none focus-within:ring-2 focus-within:ring-sky-500 focus-within:ring-offset-sky-900 hover:border-emerald-500 has-[:disabled]:pointer-events-none has-[:disabled]:select-none has-[:disabled]:opacity-70 ${time === cadenceInMinutes ? 'border-emerald-500' : ''}`}
                 htmlFor={time.toString()}
               >
                 <RadioGroup.Item
-                  className="size-6 cursor-pointer rounded-full border-2 border-emerald-700 bg-white outline-none transition-colors hover:bg-emerald-700/90 focus:shadow-[0_0_0_2px] focus:shadow-sky-500 disabled:pointer-events-none disabled:select-none disabled:opacity-50"
+                  className="size-6 cursor-pointer rounded-full border-2 border-emerald-700 bg-white outline-none transition-colors hover:bg-emerald-700/90 disabled:pointer-events-none disabled:select-none disabled:opacity-50"
                   value={time.toString()}
                   id={time.toString()}
                   disabled={isTimerRunning}
@@ -111,7 +111,7 @@ export function App() {
           {isTimerRunning ? (
             <button
               type="button"
-              className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-md bg-purple-600 px-4 py-1 font-medium text-white transition-colors hover:bg-purple-500"
+              className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-md bg-purple-600 px-4 py-1 font-medium text-white ring-offset-sky-900 transition-colors hover:bg-purple-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2"
               onClick={handleStopTimer}
             >
               Stop Timer <TimerOff className="size-5" />
@@ -120,7 +120,7 @@ export function App() {
             <button
               type="button"
               disabled={!isCandenceSelected || isTimerRunning}
-              className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md bg-emerald-600 px-4 py-1 font-medium text-white transition-colors hover:bg-emerald-500 disabled:pointer-events-none disabled:select-none disabled:opacity-50"
+              className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md bg-emerald-600 px-4 py-1 font-medium text-white ring-offset-sky-900 transition-colors hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:select-none disabled:opacity-50"
               onClick={handleStartTimer}
             >
               Start Timer <Timer className="size-5" />
